@@ -115,7 +115,7 @@ _curl_get_file_contents_by_url(char* url)
   curl_easy_setopt(curl_handle, CURLOPT_WRITEDATA, (void *)chunk);
   curl_easy_setopt(curl_handle, CURLOPT_FOLLOWLOCATION, 1);
   curl_easy_setopt(curl_handle, CURLOPT_MAXREDIRS, 3);
-  curl_easy_setopt(curl_handle, CURLOPT_USERAGENT, "pgdataclips/0.0.1"); // FIXME: pull version in at compilet time
+  curl_easy_setopt(curl_handle, CURLOPT_USERAGENT, "pgdataclips/0.0.1"); // FIXME: pull version in at compile time
 
   res = curl_easy_perform(curl_handle);
 

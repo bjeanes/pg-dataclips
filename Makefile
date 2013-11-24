@@ -1,4 +1,4 @@
-EXTENSION    = dataclip
+EXTENSION    = dataclips
 EXTVERSION   = 0.0.1
 SRCS         = $(wildcard src/*.c)
 OBJS         = $(SRCS:.c=.o)
