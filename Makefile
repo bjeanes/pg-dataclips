@@ -1,8 +1,12 @@
 EXTENSION    = dataclip
 EXTVERSION   = 0.0.1
-MODULES      = $(patsubst %.c,%,$(wildcard src/*.c))
+SRCS         = $(wildcard src/*.c)
+OBJS         = $(SRCS:.c=.o)
+MODULE_big   = $(EXTENSION)
 DATA         = $(filter-out $(wildcard sql/*--*.sql),$(wildcard sql/*.sql))
 DOCS         = $(wildcard doc/*.md)
+SHLIB_LINK   = -lcurl
+
 PG_CONFIG   ?= pg_config
 PG91         = $(shell $(PG_CONFIG) --version | grep -qE " 8\.| 9\.0" && echo no || echo yes)
 
