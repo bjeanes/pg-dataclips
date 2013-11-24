@@ -1,0 +1,5 @@
+# dataclip extension
+description = 'A function for querying with dataclips'
+default_version = '0.0.1'
+module_pathname = '$libdir/dataclip'
+relocatable = true
