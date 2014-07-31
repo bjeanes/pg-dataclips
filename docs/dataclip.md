@@ -9,6 +9,6 @@ via a function and via FDW.
 ```sql
 select dt.* 
 from dataclip("gqhkylscctbsgrohaythgdmlfcnn") 
-  as dt(foo text, bar json);
-where dt.deleted_at is null;
+  as dt(name text, data json, active boolean);
+where dt.active = 't';
 ```
